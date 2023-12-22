@@ -19,6 +19,9 @@ def add_jogo():
     porcentagem = st.number_input('Digite a Odd',key='porcentagem')
     odd_equivalente = st.number_input('Digite a Odd',key='odd_equivalente')
     green = st.number_input('Digite a Odd',key='green')
+
+    nova_linha = pd.DataFrame({'odd': [odd], 'responsabilidade': [responsabilidade], 'lucro': [lucro], 'porcentagem': [porcentagem], 'odd_equivalente': [odd_equivalente] 'green': [green]})
+    st.write(nova_linha)
     # # Adicionando novas linhas
     # st.header("Adicionar Novas Linhas:")
     # new_rows = st.text_area("Digite as novas linhas no formato CSV:", "")
