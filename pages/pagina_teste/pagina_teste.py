@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
-from google.oauth2 import service_account
+from google.oauth import service_account
 import gspread
 import pandas as pd
 
