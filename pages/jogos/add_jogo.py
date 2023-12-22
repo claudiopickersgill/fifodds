@@ -29,5 +29,5 @@ def add_jogo():
         df = pd.concat([df, nova_linha], ignore_index=True)
         st.write("DataFrame Atualizado:")
         st.write(df)
-        df_novo.to_csv(file_path, index=False)
+        df.to_csv(file_path, index=False)
         st.success("Linhas adicionadas com sucesso!")
