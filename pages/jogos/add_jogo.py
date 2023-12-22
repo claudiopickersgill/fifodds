@@ -13,12 +13,12 @@ def add_jogo():
         st.write("DataFrame Atual:")
         st.write(df)
 
-    odd = st.number_input('Digite a Odd')
-    responsabilidade = st.number_input('Digite a Odd')
-    lucro = st.number_input('Digite a Odd')
-    porcentagem = st.number_input('Digite a Odd')
-    odd_equivalente = st.number_input('Digite a Odd')
-    green = st.number_input('Digite a Odd')
+    odd = st.number_input('Digite a Odd', key=odd)
+    responsabilidade = st.number_input('Digite a Odd',key=responsabilidade)
+    lucro = st.number_input('Digite a Odd',key=lucro)
+    porcentagem = st.number_input('Digite a Odd',key=porcentagem)
+    odd_equivalente = st.number_input('Digite a Odd',key=odd_equivalente)
+    green = st.number_input('Digite a Odd',key=green)
     # # Adicionando novas linhas
     # st.header("Adicionar Novas Linhas:")
     # new_rows = st.text_area("Digite as novas linhas no formato CSV:", "")
