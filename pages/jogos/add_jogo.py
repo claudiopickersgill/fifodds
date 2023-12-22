@@ -3,7 +3,7 @@ import pandas as pd
 
 def add_jogo():
   # Carregando o CSV existente
-    file_path = "data/cvs/Jogos.csv"
+    file_path = "../data/cvs/Jogos.csv"
     if st.button("Recarregar CSV"):
         df = read_csv(file_path)
         st.write("DataFrame Atual:")
