@@ -9,9 +9,9 @@ if st.button("Carregar CSV"):
         st.write("DataFrame Atual:")
         st.write(df)
 
-def add_rows(df, nova_linha):
-    df = pd.concat([df, new_rows], ignore_index=True)
-    return df
+# def add_rows(df, nova_linha):
+#     df = 
+#     return df
 
 def add_jogo():
     if st.button("Carregar CSV"):
@@ -30,10 +30,8 @@ def add_jogo():
     st.write(nova_linha)
 
     if st.button("Adicionar Linhas"):
-        df_novo = add_rows(df, nova_linha)
+        df_novo = pd.concat([df, nova_linha], ignore_index=True)
         st.write("DataFrame Atualizado:")
         st.write(df_novo)
         df_novo.to_csv(file_path, index=False)
         st.success("Linhas adicionadas com sucesso!")
-            
-add_jogo()
