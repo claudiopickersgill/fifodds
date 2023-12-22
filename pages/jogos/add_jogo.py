@@ -4,7 +4,12 @@ from pages.jogos import cria_csv
 
 file_path = "data/cvs/Jogos.csv"
 
-def add_rows(df, new_rows):
+if st.button("Carregar CSV"):
+        df = cria_csv.read_csv(file_path)
+        st.write("DataFrame Atual:")
+        st.write(df)
+
+def add_rows(df, nova_linha):
     df = pd.concat([df, new_rows], ignore_index=True)
     return df
 
