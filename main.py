@@ -1,12 +1,15 @@
 import streamlit as st
-from pages import odds
+from pages.principal import principal
+from pages.odds import odds
 
 st.set_page_config(layout="wide")
 
 # Menu lateral
 st.sidebar.title("Menu")
 menu = st.sidebar.selectbox('Selecione uma Página', [
-    'Calcular ODDS'])
+    'Principal', 'Calcular ODDS'])
 
-if menu == 'Calcular ODDS':
-    odds.calcular_odds
+if menu == 'Principal':
+    principal.principal()
+elif menu == 'Calcular ODDS':
+    odds.odds()
