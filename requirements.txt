@@ -6,3 +6,5 @@ matplotlib-inline==0.1.6
 numpy==1.26.2
 seaborn==0.13.0
 st-gsheets-connection==0.0.3
+google.oauth==1.0.1
+gspread==5.12.3
