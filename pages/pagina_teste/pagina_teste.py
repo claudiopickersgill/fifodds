@@ -1,14 +1,15 @@
 import streamlit as st
-from pages.jogos import cria_csv
 
+# streamlit_app.py
 
-def principal():
-    st.title('Alooo, Fifih!!!')
-    st.write('Usa o Menu do lado pra navegar entre as diferentes fases do projeto')
-    st.image('data/img/odds.png')
+import streamlit as st
+from streamlit_gsheets import GSheetsConnection
 
-    file_path = "data/cvs/Jogos.csv"
-    if st.button("Carregar CSV"):
-        df = cria_csv.read_csv(file_path)
-        st.write("DataFrame Atual:")
-        st.write(df)
+# Create a connection object.
+conn = st.connection("gsheets", type=GSheetsConnection)
+
+df = conn.read()
+
+# Print results.
+for row in df.itertuples():
+    st.write(f"{row.name} has a :{row.pet}:")
