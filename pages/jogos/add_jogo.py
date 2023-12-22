@@ -30,8 +30,8 @@ def add_jogo():
     st.write(nova_linha)
 
     if st.button("Adicionar Linhas"):
-        df = add_rows(df, nova_linha)
+        df_novo = add_rows(df, nova_linha)
         st.write("DataFrame Atualizado:")
-        st.write(df)
-        df.to_csv(file_path, index=False)
+        st.write(df_novo)
+        df_novo.to_csv(file_path, index=False)
         st.success("Linhas adicionadas com sucesso!")
