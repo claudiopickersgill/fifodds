@@ -26,13 +26,12 @@ def add_jogo():
     odd_equivalente = st.number_input('Digite a odd_equivalente',key='odd_equivalente')
     green = st.number_input('Digite a green',key='green')
 
-    nova_linha = {'odd': [odd],
+    nova_linha = pd.DataFrame({'odd': [odd],
                   'responsabilidade': [responsabilidade],
                   'lucro': [lucro],
                   'porcentagem': [porcentagem],
                   'odd_equivalente': [odd_equivalente],
-                  'green': [green]}
-    df_nova_linha = pd.DataFrame(nova_linha)
+                  'green': [green]})
     st.write(nova_linha)
 
     if st.button("Adicionar Linhas"):
