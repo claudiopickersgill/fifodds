@@ -1,6 +1,6 @@
 import streamlit as st
 
-def calcular_odds():
+def odds():
     st.title('Aloouuu... vamos calcular a porcetagem em cima da Odd da aposta!!')
     st.write(
         'Digite o valor da Odd que deseja calcular a porcentagem:')
