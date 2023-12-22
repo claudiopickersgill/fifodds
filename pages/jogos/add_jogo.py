@@ -26,12 +26,18 @@ def add_jogo():
     odd_equivalente = st.number_input('Digite a odd_equivalente',key='odd_equivalente')
     green = st.number_input('Digite a green',key='green')
 
-    nova_linha = pd.DataFrame({'odd': odd, 'responsabilidade': responsabilidade, 'lucro': lucro, 'porcentagem': porcentagem, 'odd_equivalente': odd_equivalente, 'green': green})
+    nova_linha = {'odd': [odd],
+                  'responsabilidade': [responsabilidade],
+                  'lucro': [lucro],
+                  'porcentagem': [porcentagem],
+                  'odd_equivalente': [odd_equivalente],
+                  'green': [green]}
+    df_nova_linha = pd.DataFrame(nova_linha)
     st.write(nova_linha)
 
     if st.button("Adicionar Linhas"):
-        df_novo = pd.concat([df, nova_linha], ignore_index=True)
+        df = pd.concat([df, nova_linha], ignore_index=True)
         st.write("DataFrame Atualizado:")
-        st.write(df_novo)
+        st.write(df)
         df_novo.to_csv(file_path, index=False)
         st.success("Linhas adicionadas com sucesso!")
