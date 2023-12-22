@@ -14,5 +14,5 @@ if menu == 'Principal':
     principal.principal()
 elif menu == 'Calcular ODDS':
     odds.odds()
-elif manu == 'Incluir Jogo na Base':
+elif menu == 'Incluir Jogo na Base':
     add_jogo.add_jogo()
