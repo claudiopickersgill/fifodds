@@ -15,7 +15,7 @@ def add_jogo():
     lucro = st.number_input('Digite a lucro',key='lucro')
     porcentagem = st.number_input('Digite a porcentagem',key='porcentagem')
     odd_equivalente = st.number_input('Digite a odd_equivalente',key='odd_equivalente')
-    green = st.number_input('Digite a green',key='green')
+    green = st.text_input('Green?',key='green')
 
     nova_linha = pd.DataFrame({'odd': [odd],
                   'responsabilidade': [responsabilidade],
@@ -26,6 +26,7 @@ def add_jogo():
     st.write(nova_linha)
 
     if st.button("Adicionar Linhas"):
+        df = cria_csv.read_csv(file_path)
         df = pd.concat([df, nova_linha], ignore_index=True)
         st.write("DataFrame Atualizado:")
         st.write(df)
