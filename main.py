@@ -1,5 +1,5 @@
 import streamlit as st
-from pages.odds import calcular_odds
+from pages import calcular_odds
 
 st.set_page_config(layout="wide")
 
