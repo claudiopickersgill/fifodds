@@ -1,5 +1,5 @@
 import streamlit as st
-from pages import calcular_odds
+from pages import odds
 
 st.set_page_config(layout="wide")
 
@@ -9,4 +9,4 @@ menu = st.sidebar.selectbox('Selecione uma Página', [
     'Calcular ODDS'])
 
 if menu == 'Calcular ODDS':
-    calcular_odds.calcular_odds
+    odds.calcular_odds
