@@ -14,6 +14,6 @@ def odds():
     st.write('Para obter um Lucro de R$:',lucro)
     st.write('----------------------------------------------------')
     st.write('Vamos calcular o Percentual com base em um Lucro de R$:',lucro)    
-    st.write(f'Agora, vamos ver a porcetagem de Lucro, baseado no na Responsabilidade de R$:{responsabilidade}, no Lucro de R$:{lucro}, e na Odd de {odd}:')
+    st.write(f'Agora, vamos ver a porcetagem de Lucro, baseado no na Responsabilidade de R$: {responsabilidade}, no Lucro de R$: {lucro}, e na Odd de {odd} !!!')
     porcentagem = (lucro * 100) / responsabilidade
     st.write(f'De acordo com os dados disponíveis, temos uma porcentagem de Lucro igual a: {porcentagem} %')
