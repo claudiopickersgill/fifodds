@@ -9,11 +9,10 @@ def odds():
     st.write('----------------------------------------------------')
     lucro = 100
     responsabilidade = (odd - 1) * lucro
-    st.write('Precisaremos apostar um total de R$:',round(responsabilidade))
     st.write('----------------------------------------------------')
     st.write('Vamos calcular o Percentual com base em um Lucro de R$:',lucro)    
     st.write('Agora, vamos ver a porcetagem de Lucro')
-    st.write('Responsabilidade de R$:',responsabilidade)
+    st.write('Responsabilidade de R$:',round(responsabilidade))
     st.write('Lucro de R$:',lucro)
     st.write('Odd de:',odd)
     porcentagem = (lucro * 100) / responsabilidade
