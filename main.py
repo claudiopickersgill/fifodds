@@ -17,5 +17,5 @@ elif menu == 'Calcular ODDS':
     odds.odds()
 elif menu == 'Incluir Jogo na Base':
     add_jogo.add_jogo()
-elif menu == 'Pagina Teste:
+elif menu == 'Pagina Teste':
     pagina_teste.teste()
