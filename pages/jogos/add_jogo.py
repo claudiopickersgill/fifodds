@@ -2,12 +2,13 @@ import streamlit as st
 import pandas as pd
 from pages.jogos import cria_csv
 
-# def add_rows(df, new_rows):
-#     df = pd.concat([df, new_rows], ignore_index=True)
-#     return df
+file_path = "data/cvs/Jogos.csv"
+
+def add_rows(df, new_rows):
+    df = pd.concat([df, new_rows], ignore_index=True)
+    return df
 
 def add_jogo():
-    file_path = "data/cvs/Jogos.csv"
     if st.button("Carregar CSV"):
         df = cria_csv.read_csv(file_path)
         st.write("DataFrame Atual:")
@@ -22,14 +23,10 @@ def add_jogo():
 
     nova_linha = pd.DataFrame({'odd': [odd], 'responsabilidade': [responsabilidade], 'lucro': [lucro], 'porcentagem': [porcentagem], 'odd_equivalente': [odd_equivalente], 'green': [green]})
     st.write(nova_linha)
-    # # Adicionando novas linhas
-    # st.header("Adicionar Novas Linhas:")
-    # new_rows = st.text_area("Digite as novas linhas no formato CSV:", "")
-    # new_rows = pd.read_csv(pd.compat.StringIO(new_rows)) if new_rows else pd.DataFrame()
 
-    # if st.button("Adicionar Linhas"):
-    #     df = add_rows(df, new_rows)
-    #     st.write("DataFrame Atualizado:")
-    #     st.write(df)
-    #     df.to_csv(file_path, index=False)
-    #     st.success("Linhas adicionadas com sucesso!")
+    if st.button("Adicionar Linhas"):
+        df = add_rows(df, nova_linha)
+        st.write("DataFrame Atualizado:")
+        st.write(df)
+        df.to_csv(file_path, index=False)
+        st.success("Linhas adicionadas com sucesso!")
