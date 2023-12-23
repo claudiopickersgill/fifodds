@@ -15,7 +15,7 @@ def add_jogo():
 # Function to find the last filled row in the worksheet.
 def find_last_filled_row(worksheet):
     return len(worksheet.get_all_values()) + 1
-last = find_last_filled_row()
+last = find_last_filled_row(worksheet)
 st.write(last)
   # values = df.values.tolist()
   # st.write(values)
