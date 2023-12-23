@@ -60,4 +60,4 @@ nova_linha = pd.DataFrame({'odd': [odd], 'responsabilidade': [responsabilidade],
         # st.write("DataFrame Atualizado:")
         # st.write(df_novo)
         # df_novo.to_csv(file_path, index=False)
-        st.success("Linhas adicionadas com sucesso!")
+      st.success("Linhas adicionadas com sucesso!")
