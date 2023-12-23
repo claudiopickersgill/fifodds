@@ -3,7 +3,6 @@ from pages.principal import principal
 from pages.odds import odds
 from pages.jogos import add_jogo
 from pages.pagina_teste import pagina_teste
-from pages.jogos import add_jogo_2
 
 # Menu lateral
 st.sidebar.title("Menu")
@@ -19,4 +18,4 @@ elif menu == 'Incluir Jogo na Base':
 elif menu == 'Pagina Teste':
     pagina_teste.teste()
 elif menu == 'Add Jogo':
-    add_jogo_2.add_jogo_2()
+    add_jogo.add_jogo_2()
