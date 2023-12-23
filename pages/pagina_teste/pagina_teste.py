@@ -23,3 +23,4 @@ def teste():
 
     # Write
     st.write(dataframe)
+    return dataframe
