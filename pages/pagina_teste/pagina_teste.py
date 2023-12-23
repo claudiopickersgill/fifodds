@@ -4,10 +4,10 @@ from google.oauth2 import service_account
 import gspread
 import pandas as pd
 
-# @st.cache_data
-# def load_data(sheets_url):
-#     csv_url = sheets_url.replace('edit?usp=sharing', 'export?format=csv&gid=0')
-#     return pd.read_csv(csv_url)
+@st.cache_data
+def load_data(sheets_url):
+    csv_url = sheets_url.replace('edit?usp=sharing', 'export?format=csv&gid=0')
+    return pd.read_csv(csv_url)
 
 def teste():   
 
@@ -21,8 +21,10 @@ def teste():
     gc = gspread.authorize(credentials)
     
     # Get the Google Sheet by URL.
-    sheet_url = st.secrets["private_gsheets_url"]
-    csv = pd.read_csv(sheet_url)
+    df = load_data(st.secrets["private_gsheets_url"])
+    df = pd.DataFrame(df)
+    # sheet_url = st.secrets["private_gsheets_url"]
+    # csv = pd.read_csv(sheet_url)
     # sheet = gc.open_by_url(sheet_url)
-    df = pd.DataFrame(csv)
+    # df = pd.DataFrame(csv)
     st.write(df)
