@@ -22,5 +22,5 @@ def teste():
     dataframe = pd.DataFrame(worksheet.get_all_records())
 
     # Write
-    st.write(dataframe)
+    # st.write(dataframe)
     return dataframe
