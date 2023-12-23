@@ -18,3 +18,4 @@ def teste():
     # Get the Google Sheet by URL.
     sheet_url = st.secrets["private_gsheets_url"]
     sheet = gc.open_by_url(sheet_url)
+    st.write(sheet)
