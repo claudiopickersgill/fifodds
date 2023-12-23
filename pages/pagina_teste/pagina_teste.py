@@ -19,8 +19,8 @@ def teste():
     worksheet = sheet.get_worksheet(0)
 
     # Create a Pandas DF
-    dataframe = pd.DataFrame(worksheet.get_all_records())
+    # dataframe = pd.DataFrame(worksheet.get_all_records())
 
     # Write
     # st.write(dataframe)
-    return dataframe
+    return worksheet
