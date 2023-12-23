@@ -4,8 +4,6 @@ from pages.odds import odds
 from pages.jogos import add_jogo
 from pages.pagina_teste import pagina_teste
 
-st.set_page_config(layout="wide")
-
 # Menu lateral
 st.sidebar.title("Menu")
 menu = st.sidebar.selectbox('Selecione uma Página', [
