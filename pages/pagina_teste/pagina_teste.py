@@ -38,4 +38,4 @@ def teste():
     # csv = pd.read_csv(sheet_url)
     # sheet = gc.open_by_url(sheet_url)
     # df = pd.DataFrame(csv)
-    st.write(df)
+    #st.write(df)
