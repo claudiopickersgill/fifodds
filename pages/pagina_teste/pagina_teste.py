@@ -21,7 +21,8 @@ def teste():
     gc = gspread.authorize(credentials)
     
     # Get the Google Sheet by URL.
-    sheet_url = pd.read_csv(st.secrets["private_gsheets_url"])
+    sheet_url = st.secrets["private_gsheets_url"]
+    csv = pd.read_csv(sheet_url)
     # sheet = gc.open_by_url(sheet_url)
-    df = pd.DataFrame(sheet_url)
-    st.write(sheet)
+    df = pd.DataFrame(csv)
+    st.write(df)
