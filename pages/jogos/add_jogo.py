@@ -11,7 +11,7 @@ def add_jogo():
 
   # last_row = df.shape[0]
   # st.write(last_row)
-worksheet = add_jogo()
+worksheet_raw = add_jogo()
 # st.write(worksheet)
 
 # Function to find the last filled row in the worksheet.
@@ -26,7 +26,7 @@ def find_last_filled_row(worksheet):
 
 # Function to insert data into the Google Sheet after the last filled row.
 def insert_data_into_sheet(dataframe):
-    worksheet = sheet.get_worksheet(0)  # Replace 0 with the index of your desired worksheet
+    worksheet = worksheet_raw.get_worksheet(0)  # Replace 0 with the index of your desired worksheet
     values = dataframe.values.tolist()  
 
     # Find the last filled row
