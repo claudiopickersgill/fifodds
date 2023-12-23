@@ -53,11 +53,11 @@ green = st.number_input('Digite a green',key='green')
 
 nova_linha = pd.DataFrame({'odd': [odd], 'responsabilidade': [responsabilidade], 'lucro': [lucro], 'porcentagem': [porcentagem], 'odd_equivalente': [odd_equivalente], 'green': [green]})
 
-    if st.button("Adicionar Linhas"):
-      # Call the function to insert data into the Google Sheet
-      insert_data_into_sheet(nova_linha)
+if st.button("Adicionar Linhas"):
+  # Call the function to insert data into the Google Sheet
+  insert_data_into_sheet(nova_linha)
         # df_novo = pd.concat([df, nova_linha], ignore_index=True)
         # st.write("DataFrame Atualizado:")
         # st.write(df_novo)
         # df_novo.to_csv(file_path, index=False)
-      st.success("Linhas adicionadas com sucesso!")
+  st.success("Linhas adicionadas com sucesso!")
