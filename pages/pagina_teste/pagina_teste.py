@@ -21,7 +21,7 @@ def teste():
     # gc = gspread.authorize(credentials)
 
     # Create a connection object.
-    conn = st.connection("gcp_service_account", type=GSheetsConnection)
+    conn = st.connection("gsheets", type=GSheetsConnection)
 
     df = conn.read()
 
