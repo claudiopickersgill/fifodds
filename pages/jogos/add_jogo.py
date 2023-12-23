@@ -7,14 +7,16 @@ from pages.pagina_teste import pagina_teste
 
 def add_jogo():
   worksheet = pagina_teste.teste()
-  st.write(worksheet)
+  return worksheet
 
   # last_row = df.shape[0]
   # st.write(last_row)
+worksheet = add_jogo()
 
 # Function to find the last filled row in the worksheet.
 def find_last_filled_row(worksheet):
     return len(worksheet.get_all_values()) + 1
+  
 last = find_last_filled_row(worksheet)
 st.write(last)
   # values = df.values.tolist()
