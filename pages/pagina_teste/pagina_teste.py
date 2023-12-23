@@ -6,7 +6,7 @@ import pandas as pd
 
 @st.cache_data
 def load_data(sheets_url):
-    csv_url = sheets_url.replace('edit?usp=sharing', 'export?format=csv&gid=0')
+    csv_url = sheets_url.replace('edit#gid=0', 'export?format=csv&gid=0')
     return pd.read_csv(csv_url)
 
 def teste():   
