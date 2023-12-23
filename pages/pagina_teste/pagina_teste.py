@@ -21,7 +21,9 @@ def teste():
     sheet_url = st.secrets["private_gsheets_url"]
     sheet = gc.open_by_url(sheet_url)
     worksheet = sheet.get_worksheet(0)
-    st.write(worksheet)
+    # st.write(worksheet)
+    st.write(values_list = worksheet.row_values(1))
+    st.write(values_list = worksheet.col_values(1))
 
     # # Create a connection object.
     # conn = st.connection("gsheets", type=GSheetsConnection)
