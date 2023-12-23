@@ -5,9 +5,10 @@ from pages.pagina_teste import pagina_teste
 
 # file_path = "data/cvs/Jogos.csv"
 
-df = pagina_teste.teste()
-st.write(df)
-
+def add_jogo():
+  df = pagina_teste.teste()
+  st.write(df)
+  
 # if st.button("Carregar CSV"):
 #         df = cria_csv.read_csv(file_path)
 #         st.write("DataFrame Atual:")
