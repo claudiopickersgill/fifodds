@@ -26,11 +26,11 @@ def find_last_filled_row(worksheet):
 
 # Function to insert data into the Google Sheet after the last filled row.
 def insert_data_into_sheet(dataframe):
-    worksheet = worksheet_raw.get_worksheet(0)  # Replace 0 with the index of your desired worksheet
+    # worksheet = worksheet_raw.get_worksheet(0)  # Replace 0 with the index of your desired worksheet
     values = dataframe.values.tolist()  
 
     # Find the last filled row
-    last_filled_row = find_last_filled_row(worksheet)
+    last_filled_row = find_last_filled_row(worksheet_raw)
 
     # Insert the data after the last filled row
     worksheet.insert_rows(values, last_filled_row)
