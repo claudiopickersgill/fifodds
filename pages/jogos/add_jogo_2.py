@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from pages.jogos import add_jogo
 
-def add_jogos_2():
+def add_jogo_2():
   odd = st.number_input('Digite a Odd', key='odd')
   responsabilidade = st.number_input('Digite a responsabilidade',key='responsabilidade')
   lucro = st.number_input('Digite a lucro',key='lucro')
