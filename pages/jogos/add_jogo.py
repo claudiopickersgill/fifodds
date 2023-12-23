@@ -9,10 +9,6 @@ if st.button("Carregar CSV"):
         st.write("DataFrame Atual:")
         st.write(df)
 
-# def add_rows(df, nova_linha):
-#     df = 
-#     return df
-
 def add_jogo():
     if st.button("Carregar CSV"):
         df = cria_csv.read_csv(file_path)
