@@ -22,10 +22,8 @@ def teste():
     sheet = gc.open_by_url(sheet_url)
     worksheet = sheet.get_worksheet(0)
     # st.write(worksheet)
-    values_list_row = worksheet.row_values(1)
-    values_list_col = worksheet.col_values(1)
-    st.write(values_list_row)
-    st.write(values_list_col)
+    list_of_lists = worksheet.get_all_values()
+    st.write(list_of_lists)
 
     # # Create a connection object.
     # conn = st.connection("gsheets", type=GSheetsConnection)
