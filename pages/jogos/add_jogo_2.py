@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 from pages.jogos import add_jogo
-from pages.jogos import find_last_filled_row
-from pages.jogos import insert_data_into_sheet
 
 def add_jogos_2():
   odd = st.number_input('Digite a Odd', key='odd')
@@ -16,7 +14,7 @@ def add_jogos_2():
 
   if st.button("Adicionar Linhas"):
     # Call the function to insert data into the Google Sheet
-    insert_data_into_sheet.insert_data_into_sheet(nova_linha)
+    add_jogo.insert_data_into_sheet(nova_linha)
         # df_novo = pd.concat([df, nova_linha], ignore_index=True)
         # st.write("DataFrame Atualizado:")
         # st.write(df_novo)
