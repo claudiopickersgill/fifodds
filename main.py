@@ -2,6 +2,7 @@ import streamlit as st
 from pages.principal import principal
 from pages.odds import odds
 from pages.jogos import add_jogo
+from pages.jogos import add_jogo_2
 from pages.pagina_teste import pagina_teste
 
 # Menu lateral
@@ -18,4 +19,4 @@ elif menu == 'Incluir Jogo na Base':
 elif menu == 'Pagina Teste':
     pagina_teste.teste()
 elif menu == 'Add Jogo':
-    add_jogo.add_jogo_2()
+    add_jogo_2.add_jogo_2()
