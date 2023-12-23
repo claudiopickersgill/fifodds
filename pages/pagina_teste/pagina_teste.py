@@ -22,8 +22,10 @@ def teste():
     sheet = gc.open_by_url(sheet_url)
     worksheet = sheet.get_worksheet(0)
     # st.write(worksheet)
-    st.write(values_list = worksheet.row_values(1))
-    st.write(values_list = worksheet.col_values(1))
+    values_list_row = worksheet.row_values(1)
+    values_list_col = worksheet.col_values(1)
+    st.write(values_list_row)
+    st.write(values_list_col)
 
     # # Create a connection object.
     # conn = st.connection("gsheets", type=GSheetsConnection)
