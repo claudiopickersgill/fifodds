@@ -4,6 +4,11 @@ from google.oauth2 import service_account
 import gspread
 import pandas as pd
 
+@st.cache_data
+def load_data(sheets_url):
+    csv_url = sheets_url.replace('edit?usp=sharing', 'export?format=csv&gid=0')
+    return pd.read_csv(csv_url)
+
 def teste():   
 
     # Create a connection object.
