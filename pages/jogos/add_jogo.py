@@ -33,7 +33,7 @@ def insert_data_into_sheet(dataframe):
     last_filled_row = find_last_filled_row(worksheet_raw)
 
     # Insert the data after the last filled row
-    worksheet.insert_rows(values, last_filled_row)
+    worksheet_raw.insert_rows(values, last_filled_row)
 
 # # Your DataFrame with data to be inserted
 # df = pd.DataFrame(results, columns=['query', 'batch_index', 'index_of_audio_output_tensor', 'audio_file_name', 'similarity_score_by_model', 'user_relevance_score'])
