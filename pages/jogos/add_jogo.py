@@ -11,9 +11,12 @@ def add_jogo():
 
   # last_row = df.shape[0]
   # st.write(last_row)
-#   # Function to find the last filled row in the worksheet.
-# def find_last_filled_row(worksheet):
-#     return len(worksheet.get_all_values()) + 1
+
+# Function to find the last filled row in the worksheet.
+def find_last_filled_row(worksheet):
+    return len(worksheet.get_all_values()) + 1
+last = find_last_filled_row()
+st.write(last)
   # values = df.values.tolist()
   # st.write(values)
 # # Function to insert data into the Google Sheet after the last filled row.
