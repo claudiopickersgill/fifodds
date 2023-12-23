@@ -12,6 +12,7 @@ def add_jogo():
   # last_row = df.shape[0]
   # st.write(last_row)
 worksheet = add_jogo()
+st.write(worksheet)
 
 # Function to find the last filled row in the worksheet.
 def find_last_filled_row(worksheet):
